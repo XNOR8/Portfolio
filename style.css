@@ -1,0 +1,382 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f2e7f5;
+    font-family: garamond;
+}
+
+#page-wrapper{
+    position: relative;
+}
+#header{
+    display: flex;
+    position: fixed;
+    top: 0;
+    min-height: 75px;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f2e7f5;
+    border-bottom: solid 1px #C8A2C8;
+    box-shadow: 0 5px 8px #da9fea;
+    z-index: 1000;
+}
+.name{
+    width: 60vw;
+    padding-left: 50px;
+    font-weight: 600;
+}
+.name::before{
+    content: "Srinanda Das";
+    transition: opacity 0.3s;
+}
+.name:hover::before {
+    content: "Hi! I am Srinanda Das.";
+    font-weight: 800;
+    background-color: #C8A2C8 ;
+    color: black;
+    float: left;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    transition: 1000ms ease-in-out;
+  }
+.topnav {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 50px;
+    background-color: #f2e7f5
+  }
+  
+  .topnav ul{
+    width: 35vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: right;
+    margin-right: 20px;
+}
+    .topnav li{
+        list-style: none;
+    }
+
+  .topnav a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #C8A2C8 ;
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color: #C8A2C8;
+    color: white;
+  }
+
+  
+#home{
+    min-height: 670px;
+    margin-top: 70px;
+    border-bottom: solid 1px #C8A2C8;
+    box-shadow: 0 5px 8px #da9fea;
+    display: flex;
+    flex-direction: row;
+    flex-basis: 25%;
+    flex-grow: 1;
+}
+
+.desc{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    text-align: left;
+    height: 125px;
+}
+.desc>p{
+    padding-top: 100px;
+    padding-left: 2rem;
+    color: #363636;
+    font-family: Cormorant Garamond;
+    font-size: 150px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-align: left;
+}
+
+.img{
+    width: 10px;
+    height: 10px;
+    margin-top: 65px;
+}
+
+#im{
+    width: 190px;
+    height: 170px;
+    flex-shrink: 0;
+    mix-blend-mode: darken;
+}
+#post{
+    margin-left: 170px;
+}
+#line2{
+    margin-left: 55px;
+}
+#line3{
+    margin-left: 35px;
+}
+
+.im{
+    justify-content: center;
+}
+#img{
+    width: 200px;
+    height: 400px;
+    flex-shrink: 0;
+    mix-blend-mode: darken;
+    margin-top: 80px;
+    margin-left: 180px ;
+    transform: rotate(10deg);
+}
+.im>figcaption{
+    margin-right: 5rem;
+    text-align: center;
+    margin-left: 100px;
+    color: #000;
+    font-family: garamond;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+#contact{
+    min-height: 10rem;
+    background-color: teal ;
+    margin-top: 10px;
+    display: flex;
+    position: relative;
+    padding: 5px 10%;
+    border-top: 6px solid rgb(9, 112, 112);
+    box-shadow: 5px 0 8px rgb(33, 71, 71);
+    color: white;
+}
+
+.rows{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 35px 0.1%;
+    align-items: flex-start;
+}
+.col{
+    flex-basis: 15%;
+    flex-grow: .3;
+}
+.col>h3{
+    font-size: 2rem;
+    line-height: 2.5;
+}
+.col>p{
+    font-size: 1.1rem;
+    line-height: 3.5;
+}
+
+.icon{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1rem;
+}
+.mg>img{
+    padding: 0.1rem;
+    width: 3rem;
+    height: 3rem;
+    mix-blend-mode: lighten;
+    border-radius: 50%;
+}
+
+.dc{
+    text-align: center;
+    padding: 1rem;
+}
+#l>a{
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: inherit;
+}
+.col>h1{
+    padding: 0.1rem;
+    font-size: 4rem;
+    display: inline-block;
+    position: relative;
+    transition: transform 0.2s ease,font-size 0.2s ease;
+}
+.col>h1:hover{
+    transform: translateY(-8px) scale(1.1);
+}
+.col>h1:hover::before{
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: teal 0.1; /* Add a background to create the effect */
+    top: 0;
+    left: 0;
+    transform: translateY(5px); /* Add negative translateY to counter the parent's hover effect */
+    z-index: -1;
+}
+.ct>h2{
+    margin: 0.4rem;
+    padding-left: 0.1rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.ct{
+    display: flex;
+    flex-direction: row;
+    margin-top: 1.5rem;
+}
+.mgi>img{
+    margin-left: 1rem;
+    width: 3rem;
+    height: 3rem;
+    mix-blend-mode: lighten;
+    border-radius: 50%;
+}
+
+#about{
+    min-height: 670px;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #C8A2C8;
+    flex-basis: 25%;
+    flex-grow: 1;
+    background-image: url(https://24.media.tumblr.com/6bacb3e18d35adb6fce5b081fe5c07ca/tumblr_my2td9HVDf1svfte7o1_500.gif); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh; 
+    border-bottom: solid 1px #C8A2C8;
+    box-shadow: 0 5px 8px #da9fea;
+    position: relative;
+    overflow: hidden;
+}
+
+#about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url('your-gif.gif'); /* Replace with the path to your GIF */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.7; /* Adjust the opacity to control transparency */
+    z-index: -1; /* Place the GIF behind the overlay */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(240, 189, 235, 0.451); /* Adjust the color and transparency as needed */
+    z-index: 1; /* Place the overlay above the GIF */
+}
+
+#project{
+    min-height: 670px;
+    display: flex;
+    flex-direction: column;
+}
+.m{
+    display: flex;
+    flex-direction: row;
+}
+#project>h1{
+    margin-top: 5rem;
+    margin-left: 5rem;
+    display: flex;
+    font-size: 50px;
+}
+
+.card {
+    margin-top: 5rem;
+    margin-left: 9rem;
+    align-items: center;
+    width: 34rem;
+    height: 20rem;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    color: white;
+    box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+.card:hover{
+    transform: translateX(-5px) translateY(-10px) scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+#lnk{
+    list-style: none;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+#photo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.9;
+    transition: opacity .2s ease-out;
+}
+
+.card-content>h2 {
+    position: absolute;
+    inset: auto auto 30px 30px;
+    transition: inset .3s .3s ease-out;
+    font-family: inherit;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: large;
+  }
+.card-content>#tech{
+    color: #000;
+    text-align: left;
+    font-weight: 1500;
+}
+  .card:hover #photo {
+    transition: opacity .3s ease-in-out;
+    opacity: 1;
+  }
+
+.material-symbols-outlined {
+  vertical-align: middle;
+}
+
+.h2 a:hover {
+    transform: translateX(-5px) translateY(-10px) scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: black;
+  }
+  
+  .h2 a.active {
+    background-color: #C8A2C8;
+    color: white;
+  }
