@@ -590,7 +590,7 @@ body{
         height: 80vh;
         display: flex;
         flex-direction: column;
-        position: relative;
+        position: fixed;
     }
     
     .rows{
