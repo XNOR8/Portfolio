@@ -7,16 +7,14 @@
 body{
     background-color: #f2e7f5;
     font-family: garamond;
+    display: flex;
+    flex-direction: column;
 }
 
-#page-wrapper{
-    position: relative;
-    width: 100%;
-    height: 100vh;
-}
 #header{
+    width: 100%;
     display: flex;
-    position: fixed;
+    position: absolute;
     top: 0;
     min-height: 75px;
     justify-content: space-around;
@@ -26,6 +24,7 @@ body{
     box-shadow: 0 3px 5px teal;
     z-index: 1000;
 }
+
 .name{
     width: 60vw;
     padding-left: 50px;
@@ -87,39 +86,34 @@ body{
 
   
 #home{
+    position: relative;
     min-height: 670px;
     margin-top: 70px;
     border-bottom: solid 1px #C8A2C8;
-    box-shadow: 0 5px 8px #da9fea;
     display: flex;
     flex-direction: row;
-    flex-basis: 25%;
     flex-grow: 1;
 }
-
 .desc{
     display: flex;
-    flex-direction: row;
-    justify-content: left;
-    text-align: left;
-    height: 125px;
+    flex-direction: column;
+    flex-basis: 75%;
+    /* padding: 7%; */
+    position: relative;
+    /* justify-content: space-around; */
 }
-.desc>p{
-    padding-top: 100px;
-    padding-left: 2rem;
+.desc>h1{
+    padding-top: 70px;
+    padding-bottom: 20px;
+    padding-left: 3rem;
+    /* padding-left: 2rem;  */
     color: #363636;
     font-family: Cormorant Garamond;
     font-size: 150px;
     font-style: normal;
     font-weight: 500;
-    line-height: normal;
+    line-height: 0.8;
     text-align: left;
-}
-
-.img{
-    width: 10px;
-    height: 10px;
-    margin-top: 65px;
 }
 
 #im{
@@ -128,44 +122,41 @@ body{
     flex-shrink: 0;
     mix-blend-mode: darken;
 }
-#post{
-    margin-left: 170px;
-}
 #line2{
-    margin-left: 55px;
+    padding: 20px;
+    padding-left: 7rem;
 }
 #line3{
-    margin-left: 35px;
+    padding: 20px;
+    padding-left: 6rem;
 }
-
-.im{
-    justify-content: center;
+.img{
+    display: flex;
+    flex:25%;
+    justify-content: space-around;
 }
-#img{
+.im>img{
+    margin-left: 18%;
     width: 200px;
     height: 400px;
-    flex-shrink: 0;
     mix-blend-mode: darken;
     margin-top: 80px;
-    margin-left: 180px ;
-    transform: rotate(10deg);
+    transform: rotate(20deg);
 }
 .im>figcaption{
-    margin-right: 5rem;
-    text-align: center;
-    margin-left: 100px;
     color: #000;
     font-family: garamond;
     font-size: 18px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 550;
     letter-spacing: 1px;
+    text-align: center;
 }
 
 #contact{
     min-height: 10rem;
     background-color: teal ;
-    margin-top: 10px;
+    margin-top: 18px;
     display: flex;
     position: relative;
     padding: 5px 10%;
@@ -175,6 +166,7 @@ body{
 }
 
 .rows{
+    position: relative;
     display: flex;
     width: 100%;
     flex-wrap: wrap;
@@ -182,6 +174,7 @@ body{
     align-items: flex-start;
 }
 .col{
+    position: relative;
     flex-basis: 15%;
     flex-grow: .3;
 }
@@ -199,6 +192,7 @@ body{
 }
 
 .icon{
+    position: relative;
     display: flex;
     flex-direction: row;
     margin-bottom: 1rem;
@@ -399,4 +393,236 @@ body{
     margin-top: 3rem;
     font-size: 2rem;
     font-weight: 500;
+}
+
+
+@media only screen and (max-width: 844px) {
+    /* For mobile phones: */
+    .topnav ul{
+        display: flex;
+        flex-direction: row;
+    }
+
+    #header{
+        display: flex;
+        flex-direction: row;
+        position: fixed;
+        max-width: 100%;
+        min-height: 75px;
+        background-color: rgb(171, 220, 220);
+        z-index: 1000;
+    }
+
+    .topnav {
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(171, 220, 220);
+        align-items: flex-end;
+        padding-left: 1rem;
+        margin: 0.11rem;
+        justify-content: center;
+        padding-right: 30px;
+      }
+
+      .topnav a {
+        color: black;
+        text-decoration: none;
+        font-size: 15px;
+        padding: 0.4rem;
+        align-self: flex-end;
+      }
+      
+      .topnav a:hover {
+        background-color: rgb(6, 177, 177) ;
+        color: black;
+      }
+      
+      .topnav a.active {
+        background-color: rgb(6, 177, 177);
+        color: white;
+      }
+    
+      .name{
+        display: flex;
+        font-weight: 600;
+        font-size: 1rem;
+        padding-left: 1rem;
+    }
+}
+
+@media only screen and (max-width: 844px) {
+    /* For mobile phones: */
+    #home{
+        position: relative;
+        min-height: 670px;
+        margin-top: 30px;
+        border-bottom: solid 1px #C8A2C8;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+    .desc{
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        flex-basis: 75%;
+        /* padding: 7%; */
+        position: relative;
+        /* justify-content: space-around; */
+    }
+    .desc>h1{
+        padding-top: 60px;
+        padding-bottom: 20px;
+        padding-left: 1rem;
+        /* padding-left: 2rem;  */
+        color: #363636;
+        font-family: Cormorant Garamond;
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 0.5;
+        text-align: left;
+    }
+    
+    #im{
+        width: 90px;
+        height: 70px;
+        flex-shrink: 0;
+        mix-blend-mode: darken;
+    }
+    #line2{
+        padding: 20px;
+        padding-left: 2.9rem;
+    }
+    #line3{
+        padding: 20px;
+        padding-left: 2.5rem;
+    }
+    .img{
+        display: flex;
+        flex:25%;
+        justify-content: center;
+    }
+    .im>img{
+        width: 200px;
+        height: 400px;
+        mix-blend-mode: darken;
+        margin-top: 10px;
+        margin-left: 90px;
+        transform: rotate(20deg);
+    }
+    .im>figcaption{
+        margin-bottom: 20px;
+        color: #000;
+        font-family: garamond;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 550;
+        letter-spacing: 1px;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 844px) {
+    /* For mobile phones: */
+    #about{
+        width: 100%;
+    }
+
+    .overlay>h1{
+        margin-top: 1rem;
+        margin-left: 2rem;
+        display: flex;
+        font-size: 40px;
+    }
+    #am{
+        display: flex;
+        margin: 2rem;
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+
+}
+
+@media only screen and (max-width: 844px) {
+    /* For mobile phones: */
+    .m{
+        display: flex;
+        flex-direction: column;
+    }
+    #project>h1{
+        margin-top: 3rem;
+        margin-left: 3rem;
+        display: flex;
+        font-size: 40px;
+    }
+    .card {
+        margin-top: 2rem;
+        margin-left: 2rem;
+        align-items: center;
+        width: 20rem;
+        height: 14rem;
+    }
+    .card-content>h2 {
+        position: absolute;
+        inset: auto auto 10px 20px;
+        transition: inset .3s .3s ease-out;
+        font-family: inherit;
+        font-weight: 700;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: large;
+      }
+    .card-content>#tech{
+        inset: auto auto 10px 65px;
+        color: #000;
+        text-align: left;
+        font-weight: 1500;
+        font-size: medium;
+    }
+}
+
+@media only screen and (max-width: 844px) {
+    /* For mobile phones: */
+    #contact{
+        background-color: teal ;
+        margin-top: 10px;
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+    
+    .rows{
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+    .col{
+        flex-basis: 15%;
+        flex-grow: 1;
+        margin-bottom: 1.2rem;
+        min-height: 138px; ;
+    }
+    .col>h3{
+        font-size: 2rem;
+        line-height: 2.5;
+    }
+    .col>p{
+        font-size: 1.1rem;
+        line-height: 1.5;
+    }
+    .icon{
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 1rem;
+    }
+    .col>h1{
+        padding: 0.1rem;
+        font-size: 3rem;
+        display: inline-block;
+        position: relative;
+        transition: transform 0.2s ease,font-size 0.2s ease;
+    }
 }
