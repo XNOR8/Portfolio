@@ -588,7 +588,6 @@ body{
         background-color: teal ;
         margin-top: 10px;
         margin-bottom: 0;
-        height: 80vh;
         display: flex;
         flex-direction: column;
         position: relative;
