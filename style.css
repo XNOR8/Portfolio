@@ -565,12 +565,12 @@ body{
         margin-top: 3rem;
         margin-left: 2rem;
         display: flex;
-        font-size: 30px;
+        font-size: 50px;
     }
     #am{
         display: flex;
         margin: 2rem 2rem;
-        font-size: 1.35rem;
+        font-size: 1.25rem;
         font-weight: 500;
     }
 
