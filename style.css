@@ -560,6 +560,10 @@ body{
 
     #mp{
         height: 60vh;
+        flex: 30%
+    }
+    .overlay{
+        flex: 70%;
     }
     .overlay>h1{
         margin-top: 3rem;
