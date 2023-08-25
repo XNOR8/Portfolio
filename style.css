@@ -216,9 +216,9 @@ body{
     text-decoration: none;
     color: inherit;
 }
-.col>h1{
+.col>h1 , #lt{
     padding: 0.1rem;
-    font-size: 4rem;
+    font-size: 3.9rem;
     display: inline-block;
     position: relative;
     transition: transform 0.2s ease,font-size 0.2s ease;
@@ -227,6 +227,8 @@ body{
 }
 .col>h1:hover{
     transform: translateY(-8px) scale(1.1);
+    text-decoration: none;
+    color: inherit;
 }
 .col>h1:hover::before{
     content: " ";
@@ -238,6 +240,8 @@ body{
     left: 0;
     transform: translateY(5px); /* Add negative translateY to counter the parent's hover effect */
     z-index: -1;
+    text-decoration: none;
+    color: inherit;
 }
 .ct>h2{
     margin: 0.4rem;
