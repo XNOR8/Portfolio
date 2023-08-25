@@ -75,8 +75,10 @@ body{
   }
   
   .topnav a:hover {
-    background-color: rgb(6, 177, 177) ;
-    color: black;
+    border: #000;
+    color: rgb(0, 0, 0);
+    font-size: 19px;
+    font-weight: 600;
   }
   
   .topnav a.active {
@@ -220,6 +222,8 @@ body{
     display: inline-block;
     position: relative;
     transition: transform 0.2s ease,font-size 0.2s ease;
+    text-decoration: none;
+    color: inherit;
 }
 .col>h1:hover{
     transform: translateY(-8px) scale(1.1);
